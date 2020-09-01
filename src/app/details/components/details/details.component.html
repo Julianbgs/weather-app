@@ -1,0 +1,67 @@
+<div class="details">
+  <div class="deatils__back"
+       [routerLink]="['/']"
+  >
+    Back
+  </div>
+  <div class="details__title">
+    Weather for next 5 days
+  </div>
+  <div class="details__wrapper">
+    <div class="details__card">
+      <div class="details__card-name">{{cityInfo?.city?.name}}, {{cityInfo?.city?.country}}</div>
+      <div class="details__box">
+        <div class="details__temp">
+          Temperature: {{cityInfo?.list[0]?.main?.temp}}℃
+        </div>
+        <div class="details__card-description">{{cityInfo?.list[0]?.weather[0]?.description}}</div>
+        <img src='{{ "http://openweathermap.org/img/wn/" + cityInfo?.list[0]?.weather[0]?.icon + "@2x.png" }}'
+             alt="weather icon">
+      </div>
+    </div>
+    <div class="details__card">
+      <div class="details__card-name">{{cityInfo?.city?.name}}, {{cityInfo?.city?.country}}</div>
+      <div class="details__box">
+        <div class="details__temp">
+          Temperature: {{cityInfo?.list[9]?.main?.temp}}℃
+        </div>
+        <div class="details__card-description">{{cityInfo?.list[9]?.weather[0]?.description}}</div>
+        <img src='{{ "http://openweathermap.org/img/wn/" + cityInfo?.list[10]?.weather[0]?.icon + "@2x.png" }}'
+             alt="weather icon">
+      </div>
+    </div>
+    <div class="details__card">
+      <div class="details__card-name">{{cityInfo?.city?.name}}, {{cityInfo?.city?.country}}</div>
+      <div class="details__box">
+        <div class="details__temp">
+          Temperature: {{cityInfo?.list[17]?.main?.temp}}℃
+        </div>
+        <div class="details__card-description">{{cityInfo?.list[17]?.weather[0]?.description}}</div>
+        <img src='{{ "http://openweathermap.org/img/wn/" + cityInfo?.list[17]?.weather[0]?.icon + "@2x.png" }}'
+             alt="weather icon">
+      </div>
+    </div>
+    <div class="details__card">
+      <div class="details__card-name">{{cityInfo?.city?.name}}, {{cityInfo?.city?.country}}</div>
+      <div class="details__box">
+        <div class="details__temp">
+          Temperature: {{cityInfo?.list[25]?.main?.temp}}℃
+        </div>
+        <div class="details__card-description">{{cityInfo?.list[25]?.weather[0]?.description}}</div>
+        <img src='{{ "http://openweathermap.org/img/wn/" + cityInfo?.list[25]?.weather[0]?.icon + "@2x.png" }}'
+             alt="weather icon">
+      </div>
+    </div>
+    <div class="details__card">
+      <div class="details__card-name">{{cityInfo?.city?.name}}, {{cityInfo?.city?.country}}</div>
+      <div class="details__box">
+        <div class="details__temp">
+          Temperature: {{cityInfo?.list[31]?.main?.temp}}℃
+        </div>
+        <div class="details__card-description">{{cityInfo?.list[31]?.weather[0]?.description}}</div>
+        <img src='{{ "http://openweathermap.org/img/wn/" + cityInfo?.list[31]?.weather[0]?.icon + "@2x.png" }}'
+             alt="weather icon">
+      </div>
+    </div>
+  </div>
+</div>

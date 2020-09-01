@@ -1,0 +1,24 @@
+<div class="search">
+  <div class="search__input-wrapper">
+    <input type="text"
+           class="search__input"
+           placeholder="Type city name"
+           [(ngModel)]="city"
+           (change)="getCityInformation()"
+    >
+  </div>
+  <div class="search__card"
+       *ngIf="appearCard"
+       [routerLink]="['/details']"
+       [queryParams]="{city: cityInfo?.city?.name }"
+  >
+    <div class="search__card-name">{{cityInfo?.city?.name}}, {{cityInfo?.city?.country}}</div>
+    <div class="search__box">
+      <div class="search__temp">
+        Temperature: {{cityInfo?.list[0]?.main?.temp}}℃
+      </div>
+      <div class="search__card-description">{{cityInfo?.list[0]?.weather[0]?.description}}</div>
+      <img src='{{ "http://openweathermap.org/img/wn/" + cityInfo?.list[0]?.weather[0]?.icon + "@2x.png" }}' alt="weather icon">
+    </div>
+  </div>
+</div>
